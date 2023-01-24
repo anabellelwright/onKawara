@@ -16,7 +16,7 @@
 	
 </style>
 
-<div>Hello</div>
+<!-- <div>hello</div> -->
 
 <script> 
 function onKaware (){
@@ -25,15 +25,28 @@ function onKaware (){
   doucment.body.alignItems = 'center'
   document.body.style.height = '100vh'
   
+	const months = [
+    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July'
+    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' 
+  ]
+  
+  
+  const d = new Date()
+  const day = d.getDate()
+  const m = d.getMonth()
+  const month = months[m]
+  // const month 
+  const year = d.getFullYear() 
+  
+ 
+  
   const div = document.createElement('div')
-  div.textContent 
+  div.textContent = '${month}. ${day}, ${year}'
   div.style.color = 'white'
   div.style.fontSize = '20vw'
   div.style.fontFamily = 'futura' 
-  
   document.body.appendChild(div)
 }
 
-  
-wind.addEventListener('load', onKawara)
+window.addEventListener('load', onKawara)
 </script>
